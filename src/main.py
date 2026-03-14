@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 
 
-with open ("wordlist.txt",encoding = "iso-8859-1" ) as f:
+with open("src/wordlist.txt", encoding="iso-8859-1") as f:
     keywords = tuple(f.read().split('\n'))
 
 
@@ -13,7 +13,7 @@ def group_anagrams(words):
     return list(anagrams.values())
 
 
-# keywords = ("hi", "hello", "bye", "helol", "abc", "cab","bac", "silenced", "licensed", "declines")
+#keywords = ("hi", "hello", "bye", "helol", "abc", "cab","bac", "silenced", "licensed", "declines")
 
 print(group_anagrams(keywords))
 
