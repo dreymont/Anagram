@@ -13,7 +13,4 @@ def group_anagrams(words):
     return list(anagrams.values())
 
 
-#keywords = ("hi", "hello", "bye", "helol", "abc", "cab","bac", "silenced", "licensed", "declines")
-
-print(group_anagrams(keywords))
 
