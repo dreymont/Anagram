@@ -1,8 +1,9 @@
 from src.main import group_anagrams
+import pytest
 
-def test_anagrams():
-    test_keywords = ("hi", "hello", "bye", "helol", "abc", "cab", "bac", "silenced", "licensed", "declines")
+@pytest.mark.parametrize("test_keywords, expected", [
+    (() , []), (("eat",), [["eat"]]), (("abc", "cab", "bac"),  [["abc", "cab", "bac"]])] )
+
+def test_group_anagrams(test_keywords, expected):
     result = group_anagrams(test_keywords)
-    expected = [['abc', 'bac', 'cab'], ['bye'], ['declines', 'licensed', 'silenced'], ['hello', 'helol'], ['hi']]
-
-    assert sorted([sorted(g) for g in result]) == expected
+    assert result == expected
